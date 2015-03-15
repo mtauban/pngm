@@ -1,0 +1,3 @@
+
+Generation de la matrice mat.dat : 
+t=-%pi:0.01:%pi; m=sin(t)'*cos(t);
