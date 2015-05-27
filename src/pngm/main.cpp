@@ -131,14 +131,13 @@ int main(int argc, char *argv[]) {
     int n_y = 0;
     std::string line;
 
+
     while (!std::getline(std::cin, line, '\n').eof()) {
         std::istringstream reader(line);
+        double val ;
+        reader >> val ;
         while (!reader.eof()) {
-
-            double val;
-            reader >> val;
             if (n_y == 0) {
-
                 if ((!minmaxdefined) && (n_x == 0)) {
                     minValue = maxValue = val;
                 }
@@ -149,10 +148,13 @@ int main(int argc, char *argv[]) {
                 maxValue = std::max(val, maxValue);
             }
             data.push_back(val);
+            reader>> val ;
 
         }
         n_y++;
     }
+
+
     std::clog << "scaling : " << minValue << "\t" << maxValue << "\n";
     std::clog << "from : " << n_x << "x" << n_y << "\n";
     std::clog << "to : " << n_x * magx << "x" << n_y * magy << "\n";
