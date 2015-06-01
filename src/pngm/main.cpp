@@ -49,7 +49,7 @@ void help() {
 
 int main(int argc, char *argv[]) {
     unsigned COLORS = 256;
-    char* filename = "out.png";
+    char* filename ;
     unsigned magx, magy;
     magx = magy = 1;
     double * ared, *ablue, *agreen;
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
     double minValue = 0;
     double maxValue = 0;
     bool minmaxdefined = false;
-    bool ready=true ; 
+    bool ready=false  ; 
     int opt;
     while ((opt = getopt(argc, argv, "o:m:s:p:h")) != -1) {
         switch (opt) {
@@ -184,8 +184,8 @@ int main(int argc, char *argv[]) {
         }
     }
 
+	
 
-
-
+    
     encodeOneStep(filename, image, (n_x * magx), (n_y * magy));
 }

@@ -17,6 +17,6 @@ dist/:
 
 clean: 
 	rm -rf dist/*.o bin/pngm
-
+	rm -R dist bin
 
 
